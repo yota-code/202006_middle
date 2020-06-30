@@ -1,0 +1,149 @@
+Entities_Definitions DEFINITIONS ::= BEGIN
+file_ref ::= SEQUENCE OF {
+	SEQUENCE {
+		identity oid,
+		folder oid,
+		persist_as string
+	}
+}
+project ::= SEQUENCE OF {
+	SEQUENCE {
+		identity oid,
+		default_configuration oid
+	}
+}
+folder ::= SEQUENCE OF {
+	SEQUENCE {
+		identity oid,
+		folder oid,
+		extensions string,
+		name string
+	}
+}
+configuration ::= SEQUENCE OF {
+	SEQUENCE {
+		identity oid,
+		name string,
+		project oid
+	}
+}
+prop ::= SEQUENCE OF {
+	SEQUENCE {
+		identity oid,
+		name string,
+		entity oid,
+		configuration oid,
+		values SEQUENCE OF string
+	}
+}
+base ::= SEQUENCE OF {
+	SEQUENCE {
+		oid_count integer,
+		version string
+	}
+}
+base ::= {
+{100, ""}
+}
+prop ::= {
+{"4", "@ESTUDIO:SemanticFolder", "3", NULL, {"Library"}},
+{"10", "@STUDIO:PRODUCT", "1", NULL, {"SC"}},
+{"12", "@ESTUDIO:SemanticFolder", "11", NULL, {"Model"}},
+{"14", "@GENERATOR:CONST", "1", "13", {"true"}},
+{"15", "@GENERATOR:BITWISE", "1", "13", {"true"}},
+{"16", "@GENERATOR:NO_COPY_MEM", "1", "13", {"true"}},
+{"17", "@GENERATOR:SPLIT", "1", "13", {"true"}},
+{"18", "@GENERATOR:TARGET_DIR", "1", "13", {"$(NodeName)_$(CG)/$(Configuration)"}},
+{"19", "@GENERATOR:OPTS2L", "1", "13", {"true"}},
+{"20", "@GENERATOR:OPT_IO", "1", "13", {"true"}},
+{"21", "@GENERATOR:NOASSERT", "1", "13", {"true"}},
+{"22", "@GENERATOR:GENERATOR", "1", "13", {"C QUAL42"}},
+{"23", "@STUDIO:TOOLCONF", "1", NULL, {"Code Generator - Simulator", "13", "24", "34", "55"}},
+{"25", "@GENERATOR:CONST", "1", "24", {"true"}},
+{"26", "@GENERATOR:BITWISE", "1", "24", {"true"}},
+{"27", "@GENERATOR:NO_COPY_MEM", "1", "24", {"true"}},
+{"28", "@GENERATOR:SPLIT", "1", "24", {"true"}},
+{"31", "@GENERATOR:OPT_IO", "1", "24", {"true"}},
+{"32", "@GENERATOR:NOASSERT", "1", "24", {"true"}},
+{"33", "@GENERATOR:GENERATOR", "1", "24", {"C QUAL51"}},
+{"35", "@GENERATOR:CONST", "1", "34", {"true"}},
+{"36", "@GENERATOR:BITWISE", "1", "34", {"true"}},
+{"37", "@GENERATOR:NO_COPY_MEM", "1", "34", {"true"}},
+{"38", "@GENERATOR:SPLIT", "1", "34", {"true"}},
+{"39", "@GENERATOR:TARGET_DIR", "1", "34", {"$(NodeName)_$(CG)/$(Configuration)"}},
+{"40", "@GENERATOR:KEEP_NAMED_VARS", "1", "34", {"true"}},
+{"41", "@GENERATOR:LOC_CTX", "1", "34", {"true"}},
+{"42", "@SIMULATOR:DEBUG", "1", "34", {"true"}},
+{"43", "@SIMULATOR:INST", "1", "34", {"true"}},
+{"44", "@GENERATOR:GENERATOR", "1", "34", {"C QUAL51"}},
+{"46", "@REPORTER:SCRIPT", "1", "45", {"Reporter/ScadeReport.tcl"}},
+{"47", "@REPORTER:RotateLandscape", "1", "45", {"true"}},
+{"48", "@REPORTER:cstDisplayType", "1", "45", {"Flat"}},
+{"49", "@STUDIO:TOOLCONF", "1", NULL, {"Reporter", "45", "50", "55"}},
+{"51", "@REPORTER:FORMAT", "1", "50", {"rtf"}},
+{"52", "@REPORTER:SCRIPT", "1", "50", {"Reporter/ScadeReport.tcl"}},
+{"53", "@REPORTER:RotateLandscape", "1", "50", {"true"}},
+{"54", "@REPORTER:cstDisplayType", "1", "50", {"Flat"}},
+{"56", "@STUDIO:TOOLCONF", "1", NULL, {"Instrumenter", "55"}},
+{"57", "@GENERATOR:CONST", "1", "55", {"true"}},
+{"58", "@GENERATOR:BITWISE", "1", "55", {"true"}},
+{"59", "@GENERATOR:NO_COPY_MEM", "1", "55", {"true"}},
+{"60", "@GENERATOR:SPLIT", "1", "55", {"true"}},
+{"61", "@GENERATOR:TARGET_DIR", "1", "55", {"$(NodeName)_$(CG)/$(Configuration)"}},
+{"62", "@GENERATOR:OPTS2L", "1", "55", {"true"}},
+{"63", "@GENERATOR:OPT_IO", "1", "55", {"true"}},
+{"64", "@GENERATOR:NOASSERT", "1", "55", {"true"}},
+{"65", "@GENERATOR:GENERATOR", "1", "55", {"C QUAL51"}},
+{"66", "@GENERATOR:INDENT", "1", "55", {"false"}},
+{"67", "@SIMULATOR:COMPILER", "1", "55", {"GNU C"}},
+{"68", "@REPORTER:SCRIPT", "1", "55", {"Reporter/MtcReport.tcl"}},
+{"69", "@SCADE:SEMFILE", "1", NULL, {"middle.err"}},
+{"71", "@SCADE:OCCBASEFILE", "1", NULL, {"middle.occ"}},
+{"72", "@SCADE:OCCBASE", "1", NULL, {"10"}},
+{"73", "@SCADE:VERIFYTYPE", "1", NULL, {"0"}},
+{"74", "@SCADE:SAVEVERSION", "1", NULL, {"Vcurrent"}},
+{"75", "@SCADE:SAVENOTESASCOMMENTS", "1", NULL, {"t"}},
+{"76", "@STUDIO:TITLE", "1", NULL, {"<title>"}},
+{"77", "@STUDIO:SUBTITLE", "1", NULL, {"<subtitle>"}},
+{"78", "@STUDIO:DESCRIPTION", "1", NULL, {"<description>"}},
+{"79", "@STUDIO:AUTHORS", "1", NULL, {"<authors>"}},
+{"80", "@STUDIO:COMPAGNY", "1", NULL, {"<company>"}},
+{"81", "@STUDIO:DATE", "1", NULL, {"<date>"}},
+{"82", "@STUDIO:INDEX", "1", NULL, {"<index>"}},
+{"83", "@STUDIO:REFERENCE", "1", NULL, {"<reference>"}},
+{"84", "@ESTUDIO_COMPILATION:prefix", "1", NULL, {"middle"}},
+{"85", "@ESTUDIO_COMPILATION:language", "1", NULL, {"Esterel V7"}},
+{"88", "@STUDIO:TOOLCONF", "1", NULL, {"Checker", "13", "24", "34", "45", "50", "55"}},
+{"89", "@STUDIO:TOOLCONF", "1", NULL, {"DiffAnalyzer", "13", "24", "34", "45", "50", "55"}},
+{"91", "@SCADE:CHECKED", "1", NULL, {"false"}},
+{"95", "@SCADE:NOTEFILE", "1", NULL, {"$(SCADE)/examples/ConfAnnot.aty"}},
+{"96", "@SCADE:GRAPHICAL_BLOCK_FORMAT", "1", NULL, {"A4", "1", "100"}},
+{"97", "@GENERATOR:KEEP_NAMED_VARS", "1", "24", {"true"}},
+{"98", "@SIMULATOR:DEBUG", "1", "24", {"true"}},
+{"99", "@GENERATOR:LOC_CTX", "1", "24", {"true"}},
+{"100", "@GENERATOR:TARGET_DIR", "1", "24", {"../code"}}
+}
+configuration ::= {
+{"13", "KCG 4.2", "1"},
+{"24", "KCG 5.1", "1"},
+{"34", "Simulation", "1"},
+{"45", "HTML", "1"},
+{"50", "RTF", "1"},
+{"55", "MTC", "1"}
+}
+folder ::= {
+{"3", NULL, "vsp;etp", "SCADE Libraries"},
+{"11", NULL, "saofd", "Model Files"},
+{"86", NULL, "", "Design Verifier File"}
+}
+project ::= {
+{"1", "34"}
+}
+file_ref ::= {
+{"87", "86", "middle.l4"},
+{"90", "11", "Node1.saofd"},
+{"92", "11", "Node2.saofd"},
+{"93", "11", "Node3.saofd"},
+{"94", "11", "mean1.saofd"}
+}
+END
