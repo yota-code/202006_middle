@@ -10,8 +10,8 @@
 **     -split
 **     -no_copy_mem
 **     -debug
-** date of generation (MM/DD/YYYY): 06/30/2020 10:29:21
-** last modification date for middle.lus (MM/DD/YYYY): 06/30/2020 
+** date of generation (MM/DD/YYYY): 07/01/2020 10:03:28
+** last modification date for middle.lus (MM/DD/YYYY): 07/01/2020 
 ********************************************************************$*/
 
 #include "middle_main.h"
@@ -41,7 +41,9 @@ void mean(_C_mean * _C_)
     (_C_->_L6_middle) =
 	(((((_C_->_L1_middle) + (_C_->_L2_middle)) + (_C_->_L3_middle)) +
 	  (_C_->_L4_middle)) + (_C_->_L5_middle));
-    (_C_->_O0_Output1) = (_C_->_L6_middle) / 5;
+    (_C_->_L8_middle) = (real) 5.0;
+    (_C_->_L7_middle) = ((real) (_C_->_L6_middle) / (_C_->_L8_middle));
+    (_C_->_O0_Output1) = (_C_->_L7_middle);
 /*#end code for node mean */
 }
 
@@ -49,5 +51,5 @@ void mean(_C_mean * _C_)
 
 /*$************* SCADE_KCG KCG Version 5.1.1 (build i10) **************
 ** End of file mean.c
-** End of generation (MM/DD/YYYY) : 06/30/2020 10:29:21
+** End of generation (MM/DD/YYYY) : 07/01/2020 10:03:28
 ********************************************************************$*/

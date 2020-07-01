@@ -10,8 +10,8 @@
 **     -split
 **     -no_copy_mem
 **     -debug
-** date of generation (MM/DD/YYYY): 06/30/2020 10:29:21
-** last modification date for middle.lus (MM/DD/YYYY): 06/30/2020 
+** date of generation (MM/DD/YYYY): 07/01/2020 10:03:28
+** last modification date for middle.lus (MM/DD/YYYY): 07/01/2020 
 ********************************************************************$*/
 
 #ifndef _INCLUDE_mean
@@ -74,5 +74,5 @@ extern void middle(_C_middle *);
 
 /*$************* SCADE_KCG KCG Version 5.1.1 (build i10) **************
 ** End of file middle.h
-** End of generation (MM/DD/YYYY) : 06/30/2020 10:29:21
+** End of generation (MM/DD/YYYY) : 07/01/2020 10:03:28
 ********************************************************************$*/

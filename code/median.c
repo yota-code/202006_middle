@@ -10,8 +10,8 @@
 **     -split
 **     -no_copy_mem
 **     -debug
-** date of generation (MM/DD/YYYY): 06/30/2020 10:29:21
-** last modification date for middle.lus (MM/DD/YYYY): 06/30/2020 
+** date of generation (MM/DD/YYYY): 07/01/2020 10:03:28
+** last modification date for middle.lus (MM/DD/YYYY): 07/01/2020 
 ********************************************************************$*/
 
 #include "middle_main.h"
@@ -28,8 +28,9 @@ void median_init(_C_median * _C_)
     order_2_init(&(_C_->_C_7_order_2));
     order_2_init(&(_C_->_C_8_order_2));
     order_2_init(&(_C_->_C_9_order_2));
-    order_2_init(&(_C_->_C_10_order_2));
-    order_2_init(&(_C_->_C_11_order_2));
+    order_2_init(&(_C_->_C_12_order_2));
+    order_2_init(&(_C_->_C_13_order_2));
+    order_2_init(&(_C_->_C_14_order_2));
 }
 
 /* ========= */
@@ -73,20 +74,27 @@ void median(_C_median * _C_)
     (_C_->_L23_middle) = (_C_->_C_9_order_2._O0_max);
     (_C_->_L24_middle) = (_C_->_C_9_order_2._O1_min);
 /* call to node not expanded order_2 */
-/* occurrence number of the node order_2 : 10 */
-    (_C_->_C_10_order_2._I0_a) = (_C_->_L24_middle);
-    (_C_->_C_10_order_2._I1_b) = (_C_->_L22_middle);
-    order_2(&(_C_->_C_10_order_2));
-    (_C_->_L25_middle) = (_C_->_C_10_order_2._O0_max);
-    (_C_->_L26_middle) = (_C_->_C_10_order_2._O1_min);
+/* occurrence number of the node order_2 : 12 */
+    (_C_->_C_12_order_2._I0_a) = (_C_->_L20_middle);
+    (_C_->_C_12_order_2._I1_b) = (_C_->_L18_middle);
+    order_2(&(_C_->_C_12_order_2));
+    (_C_->_L29_middle) = (_C_->_C_12_order_2._O0_max);
+    (_C_->_L30_middle) = (_C_->_C_12_order_2._O1_min);
 /* call to node not expanded order_2 */
-/* occurrence number of the node order_2 : 11 */
-    (_C_->_C_11_order_2._I0_a) = (_C_->_L26_middle);
-    (_C_->_C_11_order_2._I1_b) = (_C_->_L20_middle);
-    order_2(&(_C_->_C_11_order_2));
-    (_C_->_L27_middle) = (_C_->_C_11_order_2._O0_max);
-    (_C_->_L28_middle) = (_C_->_C_11_order_2._O1_min);
-    (_C_->_O0_Output1) = (_C_->_L27_middle);
+/* occurrence number of the node order_2 : 13 */
+    (_C_->_C_13_order_2._I0_a) = (_C_->_L22_middle);
+    (_C_->_C_13_order_2._I1_b) = (_C_->_L29_middle);
+    order_2(&(_C_->_C_13_order_2));
+    (_C_->_L31_middle) = (_C_->_C_13_order_2._O0_max);
+    (_C_->_L32_middle) = (_C_->_C_13_order_2._O1_min);
+/* call to node not expanded order_2 */
+/* occurrence number of the node order_2 : 14 */
+    (_C_->_C_14_order_2._I0_a) = (_C_->_L24_middle);
+    (_C_->_C_14_order_2._I1_b) = (_C_->_L31_middle);
+    order_2(&(_C_->_C_14_order_2));
+    (_C_->_L33_middle) = (_C_->_C_14_order_2._O0_max);
+    (_C_->_L34_middle) = (_C_->_C_14_order_2._O1_min);
+    (_C_->_O0_Output1) = (_C_->_L34_middle);
 /*#end code for node median */
 }
 
@@ -94,5 +102,5 @@ void median(_C_median * _C_)
 
 /*$************* SCADE_KCG KCG Version 5.1.1 (build i10) **************
 ** End of file median.c
-** End of generation (MM/DD/YYYY) : 06/30/2020 10:29:21
+** End of generation (MM/DD/YYYY) : 07/01/2020 10:03:28
 ********************************************************************$*/
